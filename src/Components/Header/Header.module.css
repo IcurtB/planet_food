@@ -1,0 +1,52 @@
+.df{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.df>div, .df>nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.df p{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.main{
+    width: 1200px;
+    height: 40px;
+    border: 1px solid red;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.nav {
+    width: 465px;
+    height: 24px;
+    justify-content: space-between!important;
+}
+.contact {
+    width: 292px;
+    justify-content: space-between!important;
+}
+.contact p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mrg{
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
