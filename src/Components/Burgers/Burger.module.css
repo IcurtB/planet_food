@@ -1,0 +1,113 @@
+.df{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.burger{
+    width: 1200px;
+
+}
+.burger{
+    font-family: "Roboto", sans-serif;
+}
+.df nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.df nav>p{
+    line-height: 18.75px;
+    font-size: 16px;
+
+}
+.nav{
+    width: 600px;
+}
+.h2{
+    font-size: 25px;
+    line-height: 29.3px;
+    font-weight: 900;
+    color: #254F4C;
+}
+.menu{
+    width: 928px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu>.nav>p:hover{
+    color: #FF583E;
+    text-decoration: underline;
+}
+.cardBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.bCard {
+    width: 264px;
+    height: 348.13px;
+    border-radius: 40px;
+    background-color: #2B4241;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px 0 17px;
+    flex-direction: column;
+    margin: 0 16px;
+}
+.bCard p {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.name {
+    font-size: 20px;
+    line-height: 23.44px;
+    font-weight: 700;
+    margin: 60px 0 10px 0;
+}
+.text {
+    font-size: 14px;
+    line-height: 16.41px;
+    text-align: center;
+    width: 231px;
+    margin: 8px 0;
+}
+
+.btn, .btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn button {
+    background: #2B4241;
+    border: none;
+
+}
+.price{
+    padding: 0;
+    margin: 8px 0;
+}
+.count{
+    padding: 0 2px;
+    margin: 4px 0;
+}
+.basket{
+    width: 200px;
+    height: 48.3px;
+    color: white;
+    background-color: #FF583E;
+    border-radius: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.61px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
+.img {
+    position: absolute;
+    top: -50px;
+}
