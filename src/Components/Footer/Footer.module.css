@@ -1,0 +1,40 @@
+footer{
+    width: 1600px;
+    background-color: #254F4C;
+    height: 152px;
+
+
+}
+
+.footer{
+    width: 1068px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer p{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin: 0;
+}
+.footer svg path{
+    fill: white!important;
+}
+footer, .footer>div, .footer>nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    width: 495px;
+    justify-content: space-between!important;
+}
+.mrleft{
+    margin-left: 8px!important;
+}
+.logo{
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+}

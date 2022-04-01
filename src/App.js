@@ -8,6 +8,7 @@ import Reviews from "./Components/Reviews/Reviews";
 
 
 import s from './App.module.css';
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Pizza/>
         <AboutUs/>
         <Reviews/>
+        <Footer/>
     </div>
   );
 }
