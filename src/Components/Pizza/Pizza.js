@@ -38,6 +38,7 @@ const Pizza = () => {
                             img={item.image}
                         />)
                 }
+                <button className={s.more}>ПОКАЗАТЬ ЕЩЁ</button>
             </div>
 
         </div>

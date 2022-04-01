@@ -68,13 +68,27 @@
 .mgn{
     margin-right: 8px;
 }
-
+.more {
+    background:none;
+    border: 1px solid #FF583E;
+    color: #FF583E;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20.61px;
+    font-weight: 700;
+    width: 200px;
+    height: 48px;
+    border-radius: 24px;
+    margin-top: -51px;
+}
 
 /* ------- */
 .pizza{
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
+    justify-content: center;
+    align-items: center;
 }
 .card {
     width: 264px;

@@ -1,0 +1,44 @@
+.aboutUs{
+    width: 1120px;
+    height: 268px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-top: 42.99px;
+}
+.aboutUs>p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29.3px;
+    color: #254F4C;
+    margin: 0 0 42px 0;
+}
+.aboutUs>div{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 256px;
+    height: 184px;
+}
+.title{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+    color: #254F4C;
+    margin: 16px 0 8px 0;
+}
+.desc{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16.41px;
+    text-align: center;
+    margin: 0;
+}
