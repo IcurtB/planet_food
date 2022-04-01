@@ -9,7 +9,7 @@ const AboutUs = () => {
             <p>Почему выбирают нас:</p>
             <div>
             {aboutUs.map(item =>
-                <div className={s.card}>
+                <div key={item.id} className={s.card}>
                     <img src={item.img} alt=""/>
                     <p className={s.title}>{item.title}</p>
                     <p className={s.desc}>{item.text}</p>

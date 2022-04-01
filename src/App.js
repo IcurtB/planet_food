@@ -4,6 +4,8 @@ import Face from "./Components/Face/Face";
 import Burger from "./Components/Burgers/Burger";
 import Pizza from "./Components/Pizza/Pizza";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import Reviews from "./Components/Reviews/Reviews";
+
 
 import s from './App.module.css';
 
@@ -15,6 +17,7 @@ const App = () => {
         <Burger/>
         <Pizza/>
         <AboutUs/>
+        <Reviews/>
     </div>
   );
 }
