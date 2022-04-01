@@ -70,7 +70,6 @@
 }
 .more {
     background:none;
-    border: 1px solid #FF583E;
     color: #FF583E;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -78,6 +77,7 @@
     font-weight: 700;
     width: 200px;
     height: 48px;
+    border: 1px solid #FF583E;
     border-radius: 24px;
     margin-top: -51px;
 }

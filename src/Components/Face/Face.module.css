@@ -1,6 +1,5 @@
 .pos_rel{
     position: relative;
-    border: 1px solid black;
     height: 500px;
     width: 1200px;
     display: flex;

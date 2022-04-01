@@ -4,7 +4,6 @@
     display: flex;
     justify-content: left;
     flex-direction: column;
-    border: 1px solid black;
     margin-top: 42.99px;
 }
 .aboutUs>p{
