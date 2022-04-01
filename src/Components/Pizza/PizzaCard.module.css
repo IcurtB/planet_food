@@ -1,0 +1,135 @@
+.df {
+    width: 928px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 1200px;
+    position: relative;
+}
+.menu p{
+    font-family: "Roboto", sans-serif;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+.nav p{
+    font-size: 16px;
+    line-height: 18.75px;
+    color: #1D3130;
+    margin: 49.13px 0 24px 0;
+
+}
+.nav p:hover{
+    color: #FF583E;
+    text-decoration: underline;
+}
+.menu_p {
+    margin-top: 49.75px;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29.3px;
+    color: #254F4C;
+}
+.sort{
+    width: 1200px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16.41px;
+    margin-bottom: 50px;
+}
+.sort>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C4C4C4;
+    width: 160px;
+    height: 40px;
+}
+.sort>p{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 136px;
+    height: 40px;
+    margin-right: 6px;
+
+}
+.mgn{
+    margin-right: 8px;
+}
+
+
+/* ------- */
+.pizza{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+.card {
+    width: 264px;
+    height: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 16px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 40px;
+    box-shadow: 0 3px 8px 0 #bababa;
+    margin: 0 16px 94px 16px;
+}
+.card div, .card div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card>img{
+    position: relative;
+    bottom: 50px;
+}
+.name, .price{
+    margin: -32px 0 8px 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.44px;
+    color: #254F4C;
+}
+.ing{
+    width: 232px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16.41px;
+    margin: 0;
+}
+.price{
+    margin: 8px 0!important;
+}
+.btn button{
+    background: none;
+    border: none;
+
+}
+.btn>p{
+    margin: 0 8px;
+}
+.basket{
+    width: 200px;
+    height: 48px;
+    color: white;
+    border: none;
+    background-color: #254F4C;
+    border-radius: 40px;
+    margin-top: 16px;
+}
