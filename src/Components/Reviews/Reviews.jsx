@@ -1,42 +1,42 @@
-import React from "react";
-import {reviews} from "../../Constant/Constant";
+import React, {useState} from "react";
+import Slider from "react-slick";
 import s from './Reviews.module.css'
-let pen = 'images/pen.svg';
-let minipen = 'images/mini_pen.svg';
-let el = 'images/ellipce.svg'
+import Sidebar from "../Sidebar/Sidebar";
+import CardRev from "./Card";
+
 
 const Reviews = () => {
+    let [offset, setOffset] = useState(0);
+
+    const next = () => {
+        return setOffset(offset + 248)
+    };
+
+    const prev = () => {
+        return setOffset(offset - 248)
+    }
+    if(offset > 1120){
+        return setOffset(0)
+    }else if(offset< 0){
+        return setOffset(0)
+    }
+
+
+
+    console.log(offset)
     return (
         <div className={s.reviews}>
             <p>Отзывы</p>
-            <div className={s.sa}>
-                {
-                    reviews.map(item =>
-                        <div key={item.id} className={s.rev_card}>
-                            <img className={s.pos_a} src={pen} alt=""/>
-                            <img src={el} alt=""/>
-                            <div>
-                                <p className={s.name}>Сергей</p>
-                                <img src={minipen} alt=""/>
-                            </div>
-                            <p className={s.rev_text}>{item.review}</p>
-                            <p className={s.rev_date}>02.07.2020</p>
-                        </div>)
-                }
-                {/*<div className={s.rev_card}>*/}
-                {/*    <img className={s.pos_a} src={pen} alt=""/>*/}
-                {/*    <img src={el} alt=""/>*/}
-                {/*    <div>*/}
-                {/*        <p className={s.name}>Сергей</p>*/}
-                {/*        <img src={minipen} alt=""/>*/}
-                {/*    </div>*/}
-
-
-                {/*    <p className={s.rev_text}>Большое спасибо! 5 пицц доставили даже быстрее чем планировалось. Пицца была горячая и всему*/}
-                {/*        коллективу понравилась! День Рождения прошел отлично! :)</p>*/}
-                {/*    <p className={s.rev_date}>02.07.2020</p>*/}
-                {/*</div>*/}
+            <div className={s.mid}>
+                <div className={s.df}>
+                    <div className={s.sa}>
+                        <CardRev/>
+                    </div>
+                </div>
             </div>
+            <button onClick={next}>Вперед</button>
+            <button onClick={prev}>Назад</button>
+
         </div>
     )
 }

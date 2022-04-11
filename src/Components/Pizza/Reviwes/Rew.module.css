@@ -1,0 +1,13 @@
+.df{
+    width: 248px;
+    height: 328px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.df>div{
+    width: 1120px;
+    height: 328px;
+    display: flex;
+    justify-content: space-between;
+}

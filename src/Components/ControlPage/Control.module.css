@@ -1,0 +1,92 @@
+.pages{
+    width: 1185px;
+    height: 1234px;
+    padding: 36px 30px 0 30px;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 91px;
+}
+.df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nameBox{
+    height: 71px;
+}
+.main{
+    font-family: "Mulish", sans-serif;
+    font-size: 24px;
+    line-height: 30.12px;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+    margin: 19px 0;
+}
+.box{
+    width: 63px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user {
+    width: 40px;
+    height: 40px;
+}
+.name{
+    padding-left: 32px;
+    border-left: 1px solid #DFE0EB;
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+
+}
+.bell{
+    margin: 0 32px 0 25px;
+}
+
+.products>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1122px;
+}
+.item{
+    margin-bottom: 30px;
+}
+.item>div{
+    width: 258px;
+    height: 134px;
+    border: 1px solid #DFE0EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.item>div:hover{
+    border-color: #3751FF;
+    color: #3751FF;
+}
+.item>div>p{
+    font-family: "Mulish", sans-serif;
+    margin: 0 auto;
+    padding-left: 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.item>div>p:first-child{
+    font-size: 19px;
+    letter-spacing: 0.4px;
+    line-height: 23.85px;
+}
+.item>div>p:last-child{
+    letter-spacing: 1px;
+    line-height: 50.2px;
+    font-size: 40px;
+}

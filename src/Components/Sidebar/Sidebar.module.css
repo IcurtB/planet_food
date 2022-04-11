@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+.admin{
+    display: flex;
+    mix-width: 1185px;
+}
+.sidebar {
+    padding: 37px 0 0 0;
+    width: 255px;
+    height: 1234px;
+    background-color: #363740;
+    /*border: 1px solid black;*/
+}
+.sidebar p{
+    font-family: "Mulish", sans-serif;
+    color: white;
+}
+.logo{
+    height: 91px;
+}
+.logo>div {
+    display: flex;
+    padding: 0 0 0 32px;
+
+
+}
+.logo>div>img{
+    margin: 0 12px 0 0;
+}
+.logo>div>p{
+    font-size: 19px;
+    line-height: 23.85px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    color: #A4A6B3;
+}
+.df{
+    flex-direction: column;
+    display: flex;
+}
+.df>div{
+    display: flex;
+    height: 56px;
+    justify-content: left;
+    align-items: center;
+    padding: 0 0 0 32px;
+    opacity: 0.55;
+
+    /*border: 1px solid black;*/
+}
+.df>div:hover{
+    border-left: 2px solid white;
+    opacity: 1;
+    background-color: rgba(159, 162, 180, 0.08);
+
+
+}
+.df>div>img{
+    margin: 0 24px 0 0;
+    /*border: 1px solid red;*/
+    width: 16px;
+    height: 16px;
+}
+.df>div>p{
+    line-height: 20.08px;
+    letter-spacing: 0.2px;
+}
+
+
+/*********NOT**SIDEBAR*******/
+
