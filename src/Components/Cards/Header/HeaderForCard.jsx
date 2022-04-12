@@ -14,7 +14,7 @@ const HeaderForCard = ({changeType}) => {
                             <p onClick={()=> changeType('burger')}>Бургер</p>
                             <p onClick={()=> changeType('sushi')}>Суши</p>
                             <p onClick={()=> changeType('rools')}>Роллы</p>
-                            <p onClick={()=> changeType('salats')}>Салаты</p>
+                            <p onClick={()=> changeType('salads')}>Салаты</p>
                             <p onClick={()=> changeType('deserts')}>Десерты</p>
                             <p onClick={()=> changeType('drinks')}>Напитки</p>
                         </nav>
