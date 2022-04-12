@@ -1,34 +1,40 @@
 import React from "react";
-import {reviews} from "../../Constant/Constant";
+import Slider from "react-slick";
 import s from "./Reviews.module.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./slick-theme.css";
+import "./slick.css";
+
 let pen = 'images/pen.svg';
 let minipen = 'images/mini_pen.svg';
 let el = 'images/ellipce.svg'
 
 
-
-
-const CardRev = ({move}) => {
+const CardRev = ({review}) => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     return (
-        <>
-            {
-                reviews.map(item =>
 
-                    <div key={item.id} className={s.rev_card}>
-                        <img className={s.pos_a} src={pen} alt=""/>
-                        <img src={el} alt=""/>
-                        <div>
-                            <p className={s.name}>Сергей</p>
-                            <img src={minipen} alt=""/>
-                        </div>
-                        <p className={s.rev_text}>{item.review}</p>
-                        <p className={s.rev_date}>02.07.2020</p>
-                    </div>)
-            }
+            <div className={s.rev_card}>
+                <img src={pen} alt=""/>
+                <img src={el} alt=""/>
+                <div>
+                    <p className={s.name}>Сергей</p>
+                    <img src={minipen} alt=""/>
+                </div>
+                <p className={s.rev_text}>{review}</p>
+                <p className={s.rev_date}>02.07.2020</p>
+                {console.log("work")}
 
-        </>
+            </div>
+
+
+
     )
 }
+//
 export default CardRev

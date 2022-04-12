@@ -11,13 +11,13 @@
 /*    overflow: hidden;*/
 /*}*/
 
-.df{
-    width: 248px;
-    height: 328px;
-    display: flex;
-    overflow: hidden;
-    border: 1px solid black;
-}
+/*.df{*/
+/*    width: 248px;*/
+/*    height: 328px;*/
+/*    display: flex;*/
+/*    overflow: hidden;*/
+/*    border: 1px solid black;*/
+/*}*/
 .reviews>p{
     font-family: "Roboto", sans-serif;
     font-size: 25px;
@@ -26,12 +26,10 @@
     color: #254F4C;
 }
 .sa{
-    display: flex;
-    width: 1120px;
-    height: 328px;
+    margin: 0 auto!important;
+
     justify-content: space-between;
-    position: relative;
-    left: 0;
+
 }
 .rev_card {
     width: 248px;
