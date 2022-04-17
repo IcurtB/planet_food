@@ -3,24 +3,32 @@ import Header from "../Header/Header";
 import HeaderForCard from "./Header/HeaderForCard";
 import Card from "./Card/Card";
 import s from "../Pizza/PizzaCard.module.css";
+import TypeContext from "../../context/TypeContext";
 
 const Cards = () => {
     let [card, setCard] = useState([]);
-    let [type, setType] = useState('pizza')
-    useEffect(() => {
-        fetch(` http://localhost:3000/${type}`)
+    const [type, setType] = useState('pizza')
+
+    let getCard = () => {
+
+        fetch(`http://localhost:3000/${type}`)
             .then(response => response.json())
             .then(data => setCard(data))
+    }
+    useEffect(() => {
+        getCard();
     }, [type])
     return (
         <>
-            <HeaderForCard changeType={setType}/>
-            <div className={s.pizza}>
-                {console.log(card)}
-                {
 
+            <TypeContext.Provider value={{type, setType}}>
+                <HeaderForCard/>
+            <div className={s.pizza}>
+                {
                     card.map((item) =>
                         <Card
+                            food={item}
+                            id={item.id}
                             key={item.id}
                             name={item.name}
                             ing={item.ing}
@@ -28,6 +36,8 @@ const Cards = () => {
                 }
                 <button className={s.more}>ПОКАЗАТЬ ЕЩЁ</button>
             </div>
+            </TypeContext.Provider>
+
 
 
         </>

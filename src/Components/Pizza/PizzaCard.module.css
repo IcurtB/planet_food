@@ -116,9 +116,13 @@
 .name, .price{
     margin: -32px 0 8px 0;
     font-weight: 700;
+    height: 20px;
+    text-align: center;
     font-size: 20px;
     line-height: 23.44px;
     color: #254F4C;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .ing{
     width: 232px;

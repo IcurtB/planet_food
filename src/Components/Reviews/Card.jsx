@@ -28,7 +28,6 @@ const CardRev = ({review}) => {
                 </div>
                 <p className={s.rev_text}>{review}</p>
                 <p className={s.rev_date}>02.07.2020</p>
-                {console.log("work")}
 
             </div>
 

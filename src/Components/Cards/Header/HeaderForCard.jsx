@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import s from "../../Pizza/PizzaCard.module.css";
+import TypeContext from "../../../context/TypeContext";
 let arr = '/images/Vector_1.svg'
-const HeaderForCard = ({changeType}) => {
+const HeaderForCard = () => {
+    const {type, setType} = useContext(TypeContext)
     return (
         <>
 
@@ -10,13 +12,13 @@ const HeaderForCard = ({changeType}) => {
                     <p className={s.menu_p}>Меню</p>
                     <div className={s.df}>
                         <nav className={s.nav}>
-                            <p onClick={()=> changeType('pizza')}>Пицца</p>
-                            <p onClick={()=> changeType('burger')}>Бургер</p>
-                            <p onClick={()=> changeType('sushi')}>Суши</p>
-                            <p onClick={()=> changeType('rools')}>Роллы</p>
-                            <p onClick={()=> changeType('salads')}>Салаты</p>
-                            <p onClick={()=> changeType('deserts')}>Десерты</p>
-                            <p onClick={()=> changeType('drinks')}>Напитки</p>
+                            <p onClick={()=> setType('pizza')}>Пицца</p>
+                            <p onClick={()=> setType('burger')}>Бургер</p>
+                            <p onClick={()=> setType('sushi')}>Суши</p>
+                            <p onClick={()=> setType('rools')}>Роллы</p>
+                            <p onClick={()=> setType('salads')}>Салаты</p>
+                            <p onClick={()=> setType('deserts')}>Десерты</p>
+                            <p onClick={()=> setType('drinks')}>Напитки</p>
                         </nav>
                     </div>
                 </div>
