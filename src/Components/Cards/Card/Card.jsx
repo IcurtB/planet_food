@@ -22,25 +22,39 @@ const Card = ({id, ing, name, food}) => {
     const addToBasket = () => {
 
         const id = food.id;
-        let url = "http://localhost:3000/food"
+        let card = localStorage.getItem("basket")
 
         let foodObject = {
-            id: type + id,
-            name: food.name,
-            price: food.price,
-            count: count
+            [id]:{
+                id: id,
+                food_type: food.food_type,
+                name: food.name,
+                price: food.price,
+                count: count
+            }
+        }
+        if(card){
+            let cardStorage = JSON.parse(card)
+            foodObject = {
+                ...foodObject,
+                ...cardStorage
+            }
+            console.log(foodObject)
         }
 
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type":"application/json"
-            },
-            body: JSON.stringify(foodObject)
-        }
+        localStorage.setItem("basket", JSON.stringify(foodObject))
+        // let url = "http://localhost:3000/basket"
 
-        fetch(url, options)
-            .then(response => response.json())
+        // const options = {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type":"application/json"
+        //     },
+        //     body: JSON.stringify(foodObject)
+        // }
+        //
+        // fetch(url, options)
+        //     .then(response => response.json())
             
     }
 

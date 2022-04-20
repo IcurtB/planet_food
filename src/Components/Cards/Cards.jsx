@@ -8,12 +8,13 @@ import TypeContext from "../../context/TypeContext";
 const Cards = () => {
     let [card, setCard] = useState([]);
     const [type, setType] = useState('pizza')
-
     let getCard = () => {
 
-        fetch(`http://localhost:3000/${type}`)
+        fetch(`http://localhost:3000/foods?food_type=${type}`)
             .then(response => response.json())
+            // .then(data => console.log(data))
             .then(data => setCard(data))
+
     }
     useEffect(() => {
         getCard();

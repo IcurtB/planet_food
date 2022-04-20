@@ -15,10 +15,10 @@ const HeaderForCard = () => {
                             <p onClick={()=> setType('pizza')}>Пицца</p>
                             <p onClick={()=> setType('burger')}>Бургер</p>
                             <p onClick={()=> setType('sushi')}>Суши</p>
-                            <p onClick={()=> setType('rools')}>Роллы</p>
-                            <p onClick={()=> setType('salads')}>Салаты</p>
-                            <p onClick={()=> setType('deserts')}>Десерты</p>
-                            <p onClick={()=> setType('drinks')}>Напитки</p>
+                            <p onClick={()=> setType('sushi_roll')}>Роллы</p>
+                            <p onClick={()=> setType('salad')}>Салаты</p>
+                            <p onClick={()=> setType('desert')}>Десерты</p>
+                            <p onClick={()=> setType('drink')}>Напитки</p>
                         </nav>
                     </div>
                 </div>

@@ -34,59 +34,64 @@ const BasketCard = ({id, name, count, price, del }) => {
             </tr>
         </>
     )
-    
+
 }
 
 const Basket = () => {
     let url = "http://localhost:3000/food";
     let [menuBill, setMenuBill] = useState();
+    let fromStorage = localStorage.getItem("basket")
+    let parseBasket = JSON.parse(fromStorage)
+    let keys = Object.keys(parseBasket)
+    // console.log(keys)
+    // keys.map(key => console.log(key))
 
 
 
 
-    const deleteBill = (id) => {
-        let url = `http://localhost:3000/food/${id}`;
-
-        const options = {
-            method: "DELETE"
-        }
-
-
-        fetch(url, options)
-            .then((response) => {
-                    if (response.status === 200) {
-                        setMenuBill(menuBill.filter(bill => bill.id !== id))
-                        console.log('Deleted')
-                    } else {
-                        console.log("something wrong")
-                    }
-                }
-            )
-            .then(data => console.log(data))
-    }
-    useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => setMenuBill(data))
-    }, [url]);
+    // const deleteBill = (id) => {
+    //     let url = `http://localhost:3000/food/${id}`;
+    //
+    //     const options = {
+    //         method: "DELETE"
+    //     }
+    //
+    //
+    //     fetch(url, options)
+    //         .then((response) => {
+    //                 if (response.status === 200) {
+    //                     setMenuBill(menuBill.filter(bill => bill.id !== id))
+    //                     console.log('Deleted')
+    //                 } else {
+    //                     console.log("something wrong")
+    //                 }
+    //             }
+    //         )
+    //         .then(data => console.log(data))
+    // }
+    // useEffect(() => {
+    //     fetch(url)
+    //         .then(response => response.json())
+    //         .then(data => setMenuBill(data))
+    // }, [url]);
 
 
     let card;
-    if(menuBill){
-        card = menuBill.map(item => {
-            return (
-                <BasketCard
-                    del={deleteBill}
-                    food={menuBill}
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    count={item.count}
-                    price={item.price}
-                />
-            )
-        })
-    }
+    // if(parseBasket){
+    //     card = keys.map(key1 => {
+    //         return (
+    //             <BasketCard
+    //                 // del={deleteBill}
+    //                 // food={menuBill}
+    //                 key={parseBasket[key1].id}
+    //                 id={key1}
+    //                 name={parseBasket[key1].name}
+    //                 count={parseBasket[key1].count}
+    //                 price={parseBasket[key1].price}
+    //             />
+    //         )
+    //     })
+    // }
 
 
     //Модальное окно

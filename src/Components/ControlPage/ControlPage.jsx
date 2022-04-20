@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import s from "./Control.module.css";
 
 let user = "/images/admin/user.svg";
@@ -6,6 +6,126 @@ let search = "/images/admin/search.svg";
 let news = "/images/admin/new.svg";
 
 const ControlPage = () => {
+
+    let [foods, setFoods] = useState([])
+
+    useEffect(() => {
+        let url = "http://localhost:3000/foods/"
+
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => setFoods(data))
+    }, [foods.length])
+    if(foods){
+        console.log(foods)
+    }
+
+    // const foodObject = {
+    //     [food.food_typy]
+    // }
+    // const postFood = () => {
+    //     foods.map(food => {
+    //         const url = "http://localhost:3000/foods?food_type=" + food.food_type;
+    //         let urlObject1 = {
+    //             [food.id]:url
+    //         }
+    //         setUrlObject(urlObject1)
+    //     })
+    // }
+    // const postUrl = (url) => {
+    //     setUrlObject(url)
+    //     console.log(urlObject)
+    // }
+
+
+    // useEffect(() => {
+    //     if (loaded) return;
+    //     console.log('aaa')
+    //     postFood()
+    //     setLoaded(true)
+    // }, [foods, postFood, urlObject, loaded])
+
+
+    // fetch(url)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log("Первый фетч")
+    // const foodObject = {
+    //     [food.food_type]: {
+    //         ...data
+    //     }
+    // }
+    // const options = {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type":"application/json"
+    //     },
+    //     body: JSON.stringify(foodObject)
+    // }
+    //     fetch("http://localhost:3000/admin")
+    //         .then(response => response.json())
+    //         .then(data => console.log("второй фетч"))
+    // })
+    // const urlObject = {
+    //     [food.food_type]: {
+    //         url
+    //     }
+    // }
+    // console.log(urlObject)
+    // const urlObject = {
+    //     "URL": url
+    // }
+    // const urlAdmin = "http://localhost:3000/admin"
+
+    // fetch(urlAdmin, options)
+    //     .then(response => response.json())
+
+
+    // useEffect(() => {
+    //     if (foods !== undefined) {
+    //
+    //         foods.map(food => {
+    //             const urlFoodType = "http://localhost:3000/foods?food_type=" + food.food_type;
+    //             fetch(urlFoodType)
+    //                 .then(response => response.json());
+    //
+    //
+    //             let forAdmin = [fooda]
+    //
+    //
+    //             fetch(urlFoodType)
+    //                 .then(response => response.json())
+    //                 // .then(data => console.log(data))
+    //                 .then(data => {
+    //                     const urlAdmin = "http://localhost:3000/admin";
+    //                     const options = {
+    //                         method: "POST",
+    //                         headers: {
+    //                             "Content-Type":"application/json"
+    //                         },
+    //                         body: JSON.stringify(forAdmin)
+    //                     };
+    //
+    //                     fetch(urlAdmin, options)
+    //                         .then(response => response.json())
+    //
+    //                 })
+    //
+    //
+    //         })
+    //     }
+    // }, [])
+
+    // const options = {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type":"application/json"
+    //     },
+    //     body: JSON.stringify()
+    // }
+
+
     return (
         <>
             <div className={s.pages}>
@@ -26,40 +146,7 @@ const ControlPage = () => {
                 </header>
                 <div className={s.products}>
                     <div className={s.item}>
-                        <div>
-                            <p>Пицца</p>
-                            <p>60</p>
-                        </div>
-                        <div>
-                            <p>Бургер</p>
-                            <p>16</p>
-                        </div>
-                        <div>
-                            <p>Суши</p>
-                            <p>43</p>
-                        </div>
-                        <div>
-                            <p>Роллы</p>
-                            <p>64</p>
-                        </div>
-                    </div>
-                    <div className={s.item}>
-                        <div>
-                            <p>Салаты</p>
-                            <p>60</p>
-                        </div>
-                        <div>
-                            <p>Десерты</p>
-                            <p>60</p>
-                        </div>
-                        <div>
-                            <p>Напитки</p>
-                            <p>43</p>
-                        </div>
-                        <div>
-                            <p>Роллы</p>
-                            <p>64</p>
-                        </div>
+                        {/*{box}*/}
                     </div>
                 </div>
             </div>
