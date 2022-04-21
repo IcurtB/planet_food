@@ -47,7 +47,6 @@ const Basket = () => {
         if (parsed !== undefined){
             localStorage.setItem("basket", JSON.stringify(parsed))
         }
-
     }
     let card;
     if(basket){
