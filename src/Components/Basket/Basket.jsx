@@ -38,107 +38,73 @@ const BasketCard = ({id, name, count, price, del}) => {
 }
 
 const Basket = () => {
-    let [parsed, setParsed] = useState();
+    let [parsed, setParsed] = useState([]);
     const basket = Object.values(JSON.parse(localStorage.getItem("basket")))
-    console.log(basket)
+    // console.log(basket)
 
-    let deleteBill = (id) => {
-        setParsed(basket.filter(item => item.id != id))
-        if (parsed !== undefined){
-            localStorage.setItem("basket", JSON.stringify(parsed))
-        }
+
+    const deleteBill = (id) => {
+        localStorage.setItem("basket", JSON.stringify(parsed.filter((item => item.id != id))))
+        setParsed(Object.values(JSON.parse(localStorage.getItem("basket"))))
     }
-    let card;
-    if(basket){
-        card = basket.map(item => {
-            return (
-                <BasketCard
-                    del={deleteBill}
-                    // food={menuBill}
-                    key={item.id}
-                    id={item.id}
-                    name={item.name}
-                    count={item.count}
-                    price={item.price}
-                />
-            )})
-    }
-    // useEffect(() => {
-    //     setParsed(basket)
-    // }, [parsed.length])
+    useEffect(() => {
+        setParsed(Object.values(JSON.parse(localStorage.getItem("basket"))))
+    }, [parsed.length])
+    // let deleteBill = (id) => {
+    //     setParsed(basket.filter(item => item.id != id))
+    //     if (parsed !== undefined) {
+    //         localStorage.setItem("basket", JSON.stringify(parsed))
+    //     }
+    // }
 
-
-
-// const deleteBill = (id) => {
-//     let url = `http://localhost:3000/food/${id}`;
-//
-//     const options = {
-//         method: "DELETE"
-//     }
-//
-//
-//     fetch(url, options)
-//         .then((response) => {
-//                 if (response.status === 200) {
-//                     setMenuBill(menuBill.filter(bill => bill.id !== id))
-//                     console.log('Deleted')
-//                 } else {
-//                     console.log("something wrong")
-//                 }
-//             }
-//         )
-//         .then(data => console.log(data))
-// }
-// useEffect(() => {
-//     fetch(url)
-//         .then(response => response.json())
-//         .then(data => setMenuBill(data))
-// }, [url]);
-
-
-// let card;
-// if (values) {
-//     card = values.map(item => {
-//         return (
-//             <BasketCard
-//                 del={deleteBill}
-//                 // food={menuBill}
-//                 key={item.id}
-//                 id={item.id}
-//                 name={item.name}
-//                 count={item.count}
-//                 price={item.price}
-//             />
-//         )
-//     })
-// }
+    // if (basket) {
+    //     var card =
+    //     })
+    // }
 
 
 //Модальное окно
-return (
-    <>
-        <table className={s.table}>
-            <tbody>
-            <tr className={s.row}>
-                <td>№</td>
-                <td className={s.name}>Название</td>
-                <td>Количество</td>
-                <td>-</td>
-                <td>+</td>
-                <td className={s.result}>Стоимость</td>
-                <td>Удалить</td>
-            </tr>
+    return (
+        <>
+            <table className={s.table}>
+                <tbody>
+                <tr className={s.row}>
+                    <td>№</td>
+                    <td className={s.name}>Название</td>
+                    <td>Количество</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td className={s.result}>Стоимость</td>
+                    <td>Удалить</td>
+                </tr>
 
-            {
-                card
-            }
+                {
+                    basket.map(item => {
+                        return (
+                            <BasketCard
+                                del={deleteBill}
+                                // food={menuBill}
+                                key={item.id}
+                                id={item.id}
+                                name={item.name}
+                                count={item.count}
+                                price={item.price}
+                            />
+                        )
+                    })
+                }
+                <tr>
+                    <td colSpan="7">
+                        <button>Оформить</button>
+                    </td>
+                </tr>
 
 
-            </tbody>
-        </table>
-    </>
-)
-}
-;
-export default Basket
+                </tbody>
+            </table>
+        </>
+    )
+};
+export default Basket;
+
 
