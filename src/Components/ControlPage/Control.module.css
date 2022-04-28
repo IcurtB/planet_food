@@ -91,3 +91,46 @@ header{
     line-height: 50.2px;
     font-size: 40px;
 }
+
+.drop>input, .drop>button{
+    width: 256px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.drop{
+    width: 258px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.dropSelect{
+    width: 256px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.img{
+    border-radius: 8px 8px 0 0 ;
+}
+.submit{
+    border-radius: 0 0 8px 8px;
+}
+.modal{
+    width: 80px;
+    border: 1px solid red;
+    margin: 10px;
+    overflow: hidden;
+}
+.modal>p{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+.hidden{
+    height: 50px;
+    overflow: hidden;
+
+}

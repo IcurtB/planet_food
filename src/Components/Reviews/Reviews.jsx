@@ -13,7 +13,7 @@ const Reviews = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3.95,
         slidesToScroll: 1
     };
 

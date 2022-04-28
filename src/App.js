@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Main from "./Pages/Main";
 import Basket from "./Components/Basket/Basket";
 import Admin from "./Components/Admin/Admin";
+import Modal from "./Components/Modal/Modal";
 
 const App = () => {
   return (
